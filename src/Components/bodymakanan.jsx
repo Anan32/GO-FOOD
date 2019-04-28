@@ -11,7 +11,6 @@ export default class Bodymakanan extends Component {
             });
             const y =this.props.daftar.find(item => item.id===id)
             this.props.tambahtotalHarga(this.props.item.price, y);
-            console.log(y)
         };
         kurang= (id)=> {
             if (this.state.angka === 0) {
@@ -37,9 +36,9 @@ export default class Bodymakanan extends Component {
                 <p>Harga : Rp.{price}</p>
                 <hr color="green"></hr>
                 <Navbar style={{backgroundColor: "white"}} color="faded" light>
-                <Button onClick={()=>this.tambah(id)} color="success">+</Button>
-                <h4>{this.state.angka}</h4>
                 <Button onClick={()=>this.kurang(id)} color="danger">-</Button>
+                <h4>{this.state.angka}</h4>
+                <Button onClick={()=>this.tambah(id)} color="success">+</Button>
                 </Navbar>
             </CardBody>   
         </Card>

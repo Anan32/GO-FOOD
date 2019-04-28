@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import {Jumbotron, Container, Row} from 'reactstrap';
+import {Jumbotron, Container} from 'reactstrap';
 
 export default class Payment extends Component {
   render() {
     return (
       <div>
-        <Jumbotron>
+        <Jumbotron align="center">
             <Container fluid>
             <h1>Terima Kasih</h1>
             <hr color="black"></hr>

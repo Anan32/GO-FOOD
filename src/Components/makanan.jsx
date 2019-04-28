@@ -66,7 +66,7 @@ export default class Makanan extends Component {
     kurangtotalHarga= (harga, item) =>{
         this.setState({
             total: this.state.total - harga,
-            barang:this.state.barang.filter(l=>l.id != item.id)
+            barang:this.state.barang.filter(l=>l.id !== item.id)
         });
         sessionStorage.total = this.state.total - harga;
     }
