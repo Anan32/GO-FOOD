@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import {Route} from 'react-router-dom';
+import Home from './Containers/Home';
+import Restaurant from './Containers/Restaurant';
+import Menu from './Containers/Menu';
+import Pembayaran from './Containers/Pembayaran/pembayaran';
 
-function App() {
+class App extends Component{
+
+render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <switch>
+      <Route path="/" exact component={Home} />
+      <Route path="/restaurant" component={Restaurant} />
+      <Route path="/menu" component={Menu} />
+      <Route path="/pembayaran" component={Pembayaran} />
+    </switch>
     </div>
+    
   );
+}
 }
 
 export default App;
